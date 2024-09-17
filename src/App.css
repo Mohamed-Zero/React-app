@@ -1,38 +1,372 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 2000px ;
+  background-image:linear-gradient(to right,black, rgb(41, 7, 41), purple) ;
+  overflow-x: hidden !important;
+}
+a{
+  text-decoration: none !important;
+  color: white !important;
+}
+.nav-link{
+  cursor: pointer;
+}
+.mo{
+  background-color:  white !important;
+  left: 0px !important;
+}
+.astrona{
+  position: relative;
+  background-color: black !important;
+}
+#float{
+  animation: moha 2s linear infinite;
   text-align: center;
-}
+  position: absolute;
+  right: 0;
+  top: 0 ;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
-}
+  .imgAstro{
+    width: 550px ;
+    height: 350px;
+  }
+  .s1{ 
+    color: white;
+    font-size: 60px;
+  }
+  .s2{
+    color: white;
+    font-size: 30px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  }
+  .sIcon{
+    font-size: 30px !important;
+     border-radius: 50%;
+    background-color: white ;
+    color: black ;
+    border: 1px solid white;
+    
+  }
+  .sIcon:hover{
+    background-color: black ;
+    color: white ;
+
+  }
+  .Hul{
+    margin: auto !important;
+  }
+  .p1{
+    margin-top: 5px;
+    font-size: 20px ;
+    color: gray;
+  }
+  @keyframes moha{
+    0%,100% {
+      top: 0;
+    }
+    50% {
+      top:10px;
+    }  
+  }
+.navIcons{
+  text-align:center !important;
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 22px !important;
+  border-radius: 50%;
+  background-color:black !important;
+  color: white !important;
+  border: 2px solid white !important;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transform-origin: center !important;
+  transition: all 5s;
+}
+.navbar-brand{
+  font-size: 25px !important;
+
+}
+.navIcons:hover{
+  background-color: white !important;
+  color: black !important;
+}
+.btnConnect{
+  width: 150px;
+  height: 50px;
+  margin-left: 15px;
+  border-radius: 0px !important;
+  border: 2px solid white !important;
+}
+.btnConnect:hover{
+  background-color: white !important;
+  color: black !important;
+}
+.linkS3:hover{
+  color: black !important;
+  
+}
+.home{
+  width: 100% ;
+  height: 1000px;
+ background-position: center;
+ background-repeat: no-repeat;
+  /* background-image: url(https://img.freepik.com/free-photo/glowing-sky-sphere-orbits-starry-galaxy-generated-by-ai_188544-15599.jpg?t=st=1725705687~exp=1725709287~hmac=162857590837f4e9f4ae76c6ac0b7a2dd4ab411e7792c4e01cd8d5c609d48ee9&w=1500); */
+ background-image: url(https://img.freepik.com/free-photo/galaxy-wallpaper-warm-colors_23-2151769491.jpg?t=st=1726400018~exp=1726403618~hmac=1aaa570af0e5598d42b69601ce8f745ec8d682aa6d5ce96d342f3198361cb6ee&w=1500);
+}
+.btnImg{
+  border-radius: 0px !important;
+  color: white !important;
+  border: 1px solid white !important;
+  background-image: linear-gradient(to right, rgb(255, 69, 255), purple) !important ;
+}
+.main-1{
+  margin-top: -25px;
+  background-color: black;
+  border-radius: 25px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.div-1{
+  /* text-align: center; */
+  padding: 15px 75px;
 }
+.progress {
+  width: 150px;
+  height: 150px !important;
+  float: left;
+  line-height: 150px;
 
-@keyframes App-logo-spin {
-  from {
+  background: black !important;
+  margin: 20px;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid linear-gradient(to right,purple,blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: black;
+  font-size: 24px;
+  color: #fff;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress.blue .progress-bar {
+  border-color:gray;
+}
+.progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
+}
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+.text-pro{
+  margin-top: 200px;
+  margin-left: 25px;
+  width: 150px;
+}
+.carousel-control-prev-icon{
+  border-radius: 50% !important ;
+}
+.carousel-control-prev-icon:hover{
+  background-color: gray !important;
+}
+.carousel-control-next-icon{
+  border-radius: 50% !important ;
+
+}
+.carousel-control-next-icon:hover{
+  background-color:gray !important;
+  color:  white !important;
+}
+.b1{
+  border-top-left-radius: 50px !important;
+  border-bottom-left-radius: 50px !important;
+
+}
+.b3{
+  border-top-right-radius: 50px !important;
+  border-bottom-right-radius: 50px !important;
+
+}
+.md{
+  text-align: center !important;
+}
+.moha{
+  width: 300px;
+  position: relative;
+  height: 250px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;  
+  background-image: url(https://img.freepik.com/free-vector/people-starting-business-project_23-2148866842.jpg?t=st=1726149409~exp=1726153009~hmac=a601292c5fbbcf0809495f0b35f1401b9e9abd1bd9a7223b015662fb717657c5&w=740);
+ text-align: center;
+}
+.content{
+  position: absolute ;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  visibility: hidden;
+  transform: translate(-50%,-50%);
+ color: white;
+} 
+.moha::after{
+  content: '';
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background-image:linear-gradient(to right,purple,blue) ;
+  opacity: 0.5;
+  position: absolute;
+  transition: 1s;
+}
+.moha:hover::after {
+  width: 100%;
+  height:100%;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.moha:hover .content {
+
+  visibility: visible;
+}
+
+
+.bs:hover{
+  transition: all 1s;
+  background-color: white !important;
+  background-image: linear-gradient(to right, rgb(255, 69, 255), purple) !important ;
+
+}
+.Sec3-Img{
+  background-image:linear-gradient(to right, rgb(255, 69, 255), purple) !important  ;
+  height: 500px !important;
+}
+.Img{
+  width: 50%!important;
+  height:100% !important;
+}
+.Sec3-Img:hover .img{
+  text-align: center !important;
+  transition: all 1s !important;
+animation-name: img;
+animation-duration:0.5s ;
+}
+@keyframes img{
+  0%{
+    opacity: 0;
+  }
+  25%{opacity: 0.25;}
+  50%{opacity: 0.5;}
+  75%{opacity: 0.75;}
+  100%{opacity: 1;}
+}
+.form-control{
+
+  background-color:white !important  ;
+}
+.form-control:focus{
+  background-image:linear-gradient(to right, rgb(255, 69, 255), purple) !important;
+}
+.Sec-4{
+  width: 100% !important;
+  margin-top: -25px ;
+}
+.Sec4Span{
+  font-size:55px ;
+  color: black;
+}
+.Sec4Btn{
+  background-image:linear-gradient(to right, rgb(255, 69, 255), purple) !important;
+}
+.ico{
+  margin-top: 12px !important;
+  right: 0;
 }
